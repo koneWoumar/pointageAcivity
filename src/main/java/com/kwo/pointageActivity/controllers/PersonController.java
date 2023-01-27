@@ -27,13 +27,13 @@ public class PersonController {
 	}
 	
 	//getting a person by it id
-	@RequestMapping(method=RequestMethod.GET ,value="{mat}")
+	@RequestMapping(method=RequestMethod.GET ,value="/{mat}")
 	public Person getPerson(@PathVariable int mat) {
 		return(this.service.getPerson(mat));
 	}
 	
 	//deleting a person
-	@RequestMapping(method=RequestMethod.DELETE,value="{mat}")
+	@RequestMapping(method=RequestMethod.DELETE,value="/{mat}")
 	public void deletPerson(@PathVariable int mat) {
 		service.deletPerson(mat);
 	}
